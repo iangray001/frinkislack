@@ -2,6 +2,8 @@
 
 frinkislack adds a slash command to your Slack team to post semi-relevant Simpsons images searched from [frinkiac](https://frinkiac.com/). 
 
+![An inanimate carbon rod!](doc/intro.png)
+
 ## Installation
 
 Once you have cloned the repository into a PHP-capable web server you will need to set up some custom integrations in your Slack team. Browse to `https://YOURTEAMNAME.slack.com/apps/manage/custom-integrations` and ensure that you have the `Incoming Webhooks` and `Slash Commands` integrations. 
