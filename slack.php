@@ -33,16 +33,6 @@ function postWebhookMessage($payload) {
 	curl_close($ch);
 }
 
-function constructWebhookPayload($channel, $username, $text, $icon_url, $attachments) {
-	return array(
-		'channel'		=> '#'. $channel,
-		'username'		=> $username,
-		'text'			=> $text,
-		'icon_url'		=> $icon_url,
-		'attachments'	=> $attachments
-	);
-}
-
 function apiCall($method, $data) {
 	global $api_token;
 
@@ -50,11 +40,5 @@ function apiCall($method, $data) {
 	$result = file_get_contents($url);
 	return json_decode($result);
 }
-
-function getUserInfo($user) {
-	$data = '&user=' . $user;
-	return apiCall('users.info', $data);
-}
-
 
 ?>
