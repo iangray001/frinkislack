@@ -17,7 +17,6 @@ Now create `secrets.php` in the directory where you cloned the repository with t
 ```php
 <?php
 $webhook_url = 'https://hooks.slack.com/services/XXXXXXXXX';
-$api_token = 'XXXXXXXXX';
 $auth_token = 'XXXXXXXXX';
 $host_root = 'http://www.mywebsite.com/';
 ?>
@@ -25,7 +24,6 @@ $host_root = 'http://www.mywebsite.com/';
 
 * Set `webhook_url` to the URL from your Incoming Webhook.
 * Set `api_token` to the Token from your Slash Command.
-* Set `auth token` to your [Slack API key](https://api.slack.com/).
 * Set `host_root` to the URL of where you cloned the repository, with a trailing slash.
 
 Congratulations, you should now be able to annoy your team with Simpsons images!
