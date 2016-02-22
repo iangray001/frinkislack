@@ -39,7 +39,11 @@ function frinkiac($search_term) {
 	if($resnum == 0) {
 		$caps = "No results found.";
 	} else {
-		$resnum = intdiv($resnum, 4);
+		if($resnum < 5) {
+			$idx = rand(0, $resnum);
+		} else {
+			$idx = rand(0, 5);
+		}
 		$idx = rand(0, $resnum);
 		$ep = $results[$idx]->Episode;
 		$ts = $results[$idx]->Timestamp;
