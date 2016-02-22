@@ -22,8 +22,8 @@ $host_root = 'http://www.mywebsite.com/';
 ?>
 ```
 
-* Set `webhook_url` to the URL from your Incoming Webhook.
-* Set `api_token` to the Token from your Slash Command.
+* Set `webhook_url` to the URL of your Incoming Webhook.
+* Set `auth_token` to the Token from your Slash Command.
 * Set `host_root` to the URL of where you cloned the repository, with a trailing slash.
 
 Congratulations, you should now be able to annoy your team with Simpsons images!
