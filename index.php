@@ -14,6 +14,8 @@ webhook_url: When configuring your Incoming Webhooks this URL will be displayed.
 
 
 function frinkiac($search_term) {
+	global $auth_token, $host_root;
+
 	// Check auth token to ensure this is from the webhook we think it is from
 	if (!isset($_POST['token']) || $_POST['token'] != $auth_token) {
 		echo 'Bad Token';
@@ -80,6 +82,8 @@ function do_curl($url) {
 
 //Use CURL to post a message via incoming webhooks 
 function postWebhookMessage($payload) {
+	global $webhook_url;
+
 	$fields = 'payload=' . json_encode($payload);
 	$ch = curl_init();
 	curl_setopt($ch,CURLOPT_URL, $webhook_url);
